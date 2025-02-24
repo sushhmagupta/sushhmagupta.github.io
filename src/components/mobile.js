@@ -36,7 +36,10 @@ export default function Mobile() {
       />
       <br/>
       <br/>
-      <b>Moolank \ Root Number</b> : {result}
+      <b>Moolank \ Root Number is</b> : {result}
+       <br/>
+      <br/>
+      Please contact for mobile number correction.
     </>
   );
 }
