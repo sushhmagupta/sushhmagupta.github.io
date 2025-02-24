@@ -25,7 +25,7 @@ export default function Mobile() {
   }
   return (
     <>
-      <h2>Moolank \ Root \ Number Calculator</h2>
+      <b>Moolank \ Root \ Number Calculator</b><br/><br/>
       <input
         value={mobile}
         type="number"

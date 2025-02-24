@@ -27,8 +27,8 @@ export default function Home() {
   
   <div className="container">
     <div className="row ">
-        <div className="col"><img src="/mobile.png" width="100%"/></div>
-        <div className="col p-3"><Mobile/></div>
+        <div className="col-lg-6"><img src="/mobile.png" style={{"height":"200px","width":"100%","objectFit":"cover"}}/></div>
+        <div className="col-lg-6 p-3"><Mobile/></div>
       </div> 
   </div>
 
