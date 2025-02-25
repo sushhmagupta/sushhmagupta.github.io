@@ -1,28 +1,15 @@
 "use client";
 import React, { useState,useEffect } from "react";
-
+import {CalculateMoolank} from './Common'
 export default function Mobile() {
   const [mobile, setMobile] = useState("");
   const [result, setResult] = useState(0);
   useEffect(() => {
     // Calculate Moolank only on the client side
-    setResult(calculateMoolank());
+    setResult(CalculateMoolank(mobile));
+    
   }, [mobile]);
-  const calculateMoolank = ()=>{
-    if (!mobile) return 0; 
-    let num = parseInt(mobile);
-    let sum = 0;
-    while(num>0){
-        let lastBit = Math.floor(num%10);
-        num = num/10;
-        sum +=lastBit;
-        if(sum>9){
-            sum = sum-9;
-        }
-
-    }
-    return sum;
-  }
+  
   return (
     <>
       <b>Moolank \ Root \ Number Calculator</b><br/><br/>
@@ -36,10 +23,7 @@ export default function Mobile() {
       />
       <br/>
       <br/>
-      <b>Moolank \ Root Number is</b> : {result}
-       <br/>
-      <br/>
-      Please contact for mobile number correction.
+      {result>0?<><b>Moolank \ Root Number is</b> : {result}</>:null}
     </>
   );
 }
